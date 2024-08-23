@@ -16,8 +16,8 @@ const getState = () => {
       domain: 'facebook.com',
       path: '/',
       hostOnly: true,
-      creation: Date.toISOString(),
-      lastAccessed: Date.toISOString()
+      creation: new Date().toISOString(),
+      lastAccessed: new Date().toISOString()
     },
     {
       key: 'ps_l',
@@ -25,8 +25,8 @@ const getState = () => {
       domain: 'facebook.com',
       path: '/',
       hostOnly: true,
-      creation: Date.toISOString(),
-      lastAccessed: Date.toISOString(),
+      creation: new Date().toISOString(),
+      lastAccessed: new Date().toISOString(),
     },
     {
       key: 'ps_n',
@@ -34,8 +34,8 @@ const getState = () => {
       domain: 'facebook.com',
       path: '/',
       hostOnly: true,
-      creation: Date.toISOString(),
-      lastAccessed: Date.toISOString()
+      creation: new Date().toISOString(),
+      lastAccessed: new Date().toISOString()
     },
     {
       key: 'sb',
@@ -43,8 +43,8 @@ const getState = () => {
       domain: 'facebook.com',
       path: '/',
       hostOnly: true,
-      creation: Date.toISOString(),
-      lastAccessed: Date.toISOString()
+      creation: new Date().toISOString(),
+      lastAccessed: new Date().toISOString()
     },
     {
       key: 'c_user',
@@ -52,8 +52,8 @@ const getState = () => {
       domain: 'facebook.com',
       path: '/',
       hostOnly: true,
-      creation: Date.toISOString(),
-      lastAccessed: Date.toISOString()
+      creation: new Date().toISOString(),
+      lastAccessed: new Date().toISOString()
     },
     {
       key: 'fr',
@@ -61,8 +61,8 @@ const getState = () => {
       domain: 'facebook.com',
       path: '/',
       hostOnly: true,
-      creation: Date.toISOString(),
-      lastAccessed: Date.toISOString()
+      creation: new Date().toISOString(),
+      lastAccessed: new Date().toISOString()
     },
     {
       key: 'xs',
@@ -70,8 +70,8 @@ const getState = () => {
       domain: 'facebook.com',
       path: '/',
       hostOnly: true,
-      creation: Date.toISOString(),
-      lastAccessed: Date.toISOString()
+      creation: new Date().toISOString(),
+      lastAccessed: new Date().toISOString()
     },
     {
       key: 'm_page_voice',
@@ -79,8 +79,8 @@ const getState = () => {
       domain: 'facebook.com',
       path: '/',
       hostOnly: true,
-      creation: Date.toISOString(),
-      lastAccessed: Date.toISOString()
+      creation: new Date().toISOString(),
+      lastAccessed: new Date().toISOString()
     },
   ];
 };
