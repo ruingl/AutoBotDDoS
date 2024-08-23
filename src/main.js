@@ -3,7 +3,7 @@
 // Licensed under the MIT License
 
 // import necessary things
-const config = require('./config.json');
+const config = require('./conf.json');
 const utils = require('./utils');
 const axios = require('axios');
 
@@ -23,6 +23,7 @@ const run = async () => {
       admin: 69
     });
 
+    console.log('sent one! >_<');
     await sleep(TIME_INTERVAL);
   };
 };
