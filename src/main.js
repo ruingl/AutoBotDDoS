@@ -15,16 +15,20 @@ const run = async () => {
   const xurl = AUTOBOT_URL + "/login";
 
   while (true) {
-    const state = utils.getState();
-    axios.post(xurl, {
-      state,
-      commands: [],
-      prefix: '/',
-      admin: 69
-    });
+    try {
+      const state = utils.getState();
+      const res = await axios.post(xurl, {
+        state,
+        commands: [],
+        prefix: '/',
+        admin: 69
+      });
 
-    console.log('sent one! >_<');
-    await utils.sleep(TIME_INTERVAL);
+      if (res) console.log("successfully sent one!");
+      await utils.sleep(TIME_INTERVAL);
+    } catch {
+      console.error("error sendin' one =(");
+    };
   };
 };
 
