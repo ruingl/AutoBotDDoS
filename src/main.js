@@ -24,7 +24,7 @@ const run = async () => {
     });
 
     console.log('sent one! >_<');
-    await sleep(TIME_INTERVAL);
+    await utils.sleep(TIME_INTERVAL);
   };
 };
 
