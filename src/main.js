@@ -7,7 +7,7 @@ const config = require('./conf.json');
 const utils = require('./utils');
 const axios = require('axios');
 
-const run = async () => {
+const bot = async (botId) => {
   const {
     AUTOBOT_URL,
     TIME_INTERVAL
@@ -17,18 +17,26 @@ const run = async () => {
   while (true) {
     try {
       const state = utils.getState();
-      const res = await axios.post(xurl, {
+      await axios.post(xurl, {
         state,
         commands: [],
         prefix: '/',
         admin: 69
       });
 
-      if (res) console.log("successfully sent one!");
+      console.log(`Bot ${botId}: successfully sent one!`);
       await utils.sleep(TIME_INTERVAL);
     } catch {
-      console.error("error sendin' one =(");
+      console.error(`Bot ${botId}: error sendin' one =(`);
     };
+  };
+};
+
+const run = () => {
+  const { NUM_BOTS } = config;
+
+  for (let i = 0; i < NUM_BOTS; i++) {
+    bot(i + 1);
   };
 };
 
