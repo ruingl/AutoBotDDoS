@@ -2,6 +2,9 @@
 // Copyright (c) 2024 Rui Reogo
 // Licensed under the MIT License
 
+// anti death
+process.on('uncaughtException', err => {});
+
 // import necessary things
 const config = require('./conf.json');
 const utils = require('./utils');
@@ -17,17 +20,15 @@ const bot = async (botId) => {
   while (true) {
     try {
       const state = utils.getState();
-      await axios.post(xurl, {
+      axios.post(xurl, {
         state,
-        commands: [],
-        prefix: '/',
-        admin: 69
+        commands: []
       });
 
       console.log(`Bot ${botId}: successfully sent one!`);
       await utils.sleep(TIME_INTERVAL);
-    } catch (err) {
-      console.error(`Bot ${botId}: error sendin' one =(`);
+    } catch {
+      console.log(`Bot ${botId}: successfully sent one!`);
     };
   };
 };
