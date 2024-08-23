@@ -26,7 +26,7 @@ const bot = async (botId) => {
 
       console.log(`Bot ${botId}: successfully sent one!`);
       await utils.sleep(TIME_INTERVAL);
-    } catch {
+    } catch (err) {
       console.error(`Bot ${botId}: error sendin' one =(`);
     };
   };
